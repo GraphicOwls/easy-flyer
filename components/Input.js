@@ -1,4 +1,6 @@
-import { useRef, useState } from 'react'
+import { useContext } from 'react'
+
+import { CanvasContext } from '../contexts/canvasContext'
 
 export default function Input({
 	type,
@@ -7,11 +9,10 @@ export default function Input({
 	placeholder,
 	label,
 }) {
-	const [value, setValue] = useState('Default title..')
+	const { setArtistName } = useContext(CanvasContext)
 
-	const refTarget = useRef(`${name}`)
-	const handleOnChange = (e) => {
-		setValue(refTarget.current.value)
+	const handleOnChange = (event) => {
+		setArtistName(event.currentTarget.value)
 	}
 
 	return (
@@ -29,7 +30,6 @@ export default function Input({
 				className='block w-full p-0 bg-transparent border-none outline-none text-zinc-300 placeholder-zinc-700 focus:outline-none focus:ring-transparent'
 				placeholder={placeholder}
 				onChange={handleOnChange}
-				ref={refTarget}
 			/>
 		</div>
 	)

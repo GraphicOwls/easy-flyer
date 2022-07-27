@@ -1,5 +1,5 @@
 import React from 'react'
 
-export default function FlyerText({ ...props }) {
-	return <h1>Flyer Text</h1>
+export default function FlyerText({ styles }) {
+	return <span style={styles}>{text}</span>
 }
