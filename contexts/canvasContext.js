@@ -8,7 +8,10 @@ export const CanvasProvider = ({ children }) => {
 
 	return (
 		<CanvasContext.Provider
-			value={{ artistName, setArtistName }}
+			value={{
+				artistName,
+				setArtistName,
+			}}
 		>
 			{children}
 		</CanvasContext.Provider>

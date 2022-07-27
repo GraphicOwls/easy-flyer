@@ -16,11 +16,6 @@ export default function SettingsPanel({}) {
 
 	useEffect(() => {
 		setFieldGroupHeight(fieldGroupRef.current.clientHeight)
-		console.log(fieldGroupHeight)
-		console.log(
-			'width: ',
-			fieldGroupRef.current.clientWidth
-		)
 	}, [])
 
 	return (
