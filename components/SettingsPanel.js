@@ -4,11 +4,6 @@ import { Setting5, ArrowCircleDown } from 'iconsax-react'
 import { Form } from '@oneform/react'
 
 export default function SettingsPanel({}) {
-	const [fieldGroupHeight, setFieldGroupHeight] =
-		useState(null)
-
-	const fieldGroupRef = useRef(null)
-
 	useEffect(() => {
 		setFieldGroupHeight(fieldGroupRef.current.clientHeight)
 	}, [])
@@ -20,8 +15,10 @@ export default function SettingsPanel({}) {
 		setFieldVisibility(!fieldVisibility)
 	}
 
-	console.log(fieldVisibility)
-	console.log(fieldGroupRef.current.clientHeight)
+	const [fieldGroupHeight, setFieldGroupHeight] =
+		useState(null)
+
+	const fieldGroupRef = useRef(null)
 
 	return (
 		<div className='fixed w-full max-w-sm p-8 border shadow-xl right-6 bottom-6 rounded-2xl border-zinc-700 bg-zinc-800 shadow-zinc-900'>
