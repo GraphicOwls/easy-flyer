@@ -1,16 +1,11 @@
-import React from 'react'
-import { CanvasProvider } from '../contexts/canvasContext'
+import { OneFormProvider } from '@oneform/react'
 
-export default function Section({
-	children,
-	classes,
-	bgColor,
-}) {
+export default function Section({ children }) {
 	return (
-		<CanvasProvider>
-			<section className={`${classes} ${bgColor} relative`}>
+		<OneFormProvider>
+			<section className='relative w-full px-[4%]'>
 				{children}
 			</section>
-		</CanvasProvider>
+		</OneFormProvider>
 	)
 }

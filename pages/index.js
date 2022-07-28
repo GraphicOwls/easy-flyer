@@ -7,7 +7,7 @@ import FlyerImage from '../components/FlyerImage'
 
 export default function Home() {
 	return (
-		<>
+		<div className='grid min-h-screen place-items-center bg-zinc-900'>
 			<Head>
 				<title>Easy Flyer</title>
 				<meta
@@ -16,7 +16,7 @@ export default function Home() {
 				/>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<Section classes='py-6 px-[4%] bg-zinc-900 min-h-screen grid place-items-center'>
+			<Section>
 				<Container>
 					<FlyerCanvas>
 						<FlyerImage
@@ -30,6 +30,6 @@ export default function Home() {
 				</Container>
 				<SettingsPanel />
 			</Section>
-		</>
+		</div>
 	)
 }
