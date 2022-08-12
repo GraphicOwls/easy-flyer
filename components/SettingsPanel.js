@@ -52,8 +52,8 @@ export default function SettingsPanel({}) {
 				className={`${
 					fieldVisibility
 						? 'h-0'
-						: `h-[${fieldGroupHeight}]`
-				} overflow-hidden transition-height duration-500 ease-out`}
+						: `h-[${fieldGroupHeight}px]`
+				} transition-height overflow-hidden duration-500 ease-out`}
 				ref={fieldGroupRef}
 			>
 				<Form>
